@@ -11,8 +11,8 @@ pipeline{
          steps{
             echo 'Pulling...';
                git branch: 'main',
-               url : 'https://github.com/Ahmed-Zarrad/achat',
-               credentialsId: '01';
+               url : 'https://github.com/jasserismail/Devops',
+               credentialsId: 'GitID';
          }
       }
 
