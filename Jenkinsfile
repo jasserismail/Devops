@@ -1,7 +1,7 @@
 pipeline{
    environment{
       registry = 'jasser/achat'
-      registryCredential= 'dockerId'
+      registryCredential= 'dockerID'
       dockerImage = ''
    }
 
