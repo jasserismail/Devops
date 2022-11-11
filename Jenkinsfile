@@ -80,15 +80,6 @@ stage('Docker compose') {
                                sh 'docker-compose up -d '
                                  } 
                                  }
-   post{
-      success{
-         emailext body: 'Build success', subject: 'Jenkins',
-to:'jasser.ismail@esprit.tn'
-      }
-      failure{
-         emailext body: 'Build failure', subject: 'Jenkins',
-to:'jasser.ismail@esprit.tn'
-      }
-   }
+ 
 }
 }
