@@ -50,23 +50,23 @@ pipeline{
   }
 		}
 
-     // stage('build image'){
-       //  steps{
-         //   script{
-           //    dockerImage= docker.build registry + ":$BUILD_NUMBER"
-            // }
-         // }
-      // }
+      stage('build image'){
+         steps{
+            script{
+               dockerImage= docker.build registry + ":$BUILD_NUMBER"
+             }
+          }
+       }
 
-   //   stage('deploiment docker'){
-     //    steps{
-       //     script{
-         //      docker.withRegistry( '', registryCredential){
-           //       dockerImage.push()
-             //  }
-            // }
-         // }
-      // }
+      stage('deploiment docker'){
+         steps{
+            script{
+               docker.withRegistry( '', registryCredential){
+                  dockerImage.push()
+               }
+             }
+          }
+       }
 
       stage('clean'){
          steps{
