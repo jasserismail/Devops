@@ -1,4 +1,4 @@
-package tn.esprit.rh.achat.test;
+package tn.esprit.rh.achat;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
