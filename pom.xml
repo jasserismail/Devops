@@ -13,7 +13,7 @@ https://maven.apache.org/xsd/maven-4.0.0.xsd">
    <groupId>tn.esprit.rh</groupId>
    <artifactId>achat</artifactId>
    <packaging>jar</packaging>
-   <version>1.0</version>
+   <version>1.0-SNAPSHOT</version>
    <name>achat</name>
    <description>Projet pour le module DevOps</description>
    <properties>
@@ -167,9 +167,5 @@ https://maven.apache.org/xsd/maven-4.0.0.xsd">
          <id>nexus-snapshots</id>
          <url>http://192.168.1.18:8081/repository/maven-snapshots</url>
       </snapshotRepository>
-      <repository>
-         <id>deploymentRepo</id>
-         <url>http://192.168.1.18:8081/repository/maven-releases/</url>
-      </repository>
    </distributionManagement>
 </project>
