@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  mysqldb:
+    image: mysql
+    container_name: mysqljasser
+    restart: unless-stopped
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+      - MYSQL_DATABASE=achat
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/var/lib/mysql
+  app:
+    depends_on:
+      - mysqldb
+    image: jasserismail / achat
+    restart: on-failure
+    ports:
+      - 8089:8089
+    volumes:
+      - .m2:/root/.m2
+    stdin_open: true
+    tty: true
+
+volumes:
+  db:
