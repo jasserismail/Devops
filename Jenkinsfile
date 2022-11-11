@@ -46,7 +46,8 @@ pipeline{
 
       stage ('nexusdeploy'){
   steps{
-		sh "mvn deploy"			}
+		sh "mvn deploy"		
+  }
 		}
 
      // stage('build image'){
@@ -72,7 +73,7 @@ pipeline{
             sh "docker rmi $registry:$BUILD_NUMBER"
          }
       }
-}
+
 stage('Docker compose') {
 
                           steps {
@@ -89,4 +90,5 @@ to:'jasser.ismail@esprit.tn'
 to:'jasser.ismail@esprit.tn'
       }
    }
+}
 }
