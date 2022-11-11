@@ -46,8 +46,7 @@ pipeline{
 
       stage ('nexusdeploy'){
   steps{
-			nexusArtifactUploader artifacts: [[artifactId: 'achat', classifier: 'debug', file: 'target/achat-1.0.jar', type: 'jar']], credentialsId: 'nexusID', groupId: 'tn.esprit.rh', nexusUrl: '192.168.1.18:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '1.0'
-			}
+		sh " maven deploy "			}
 		}
 
       stage('build image'){
