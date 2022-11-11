@@ -1,3 +1,3 @@
 FROM adoptopenjdk/openjdk11
-COPY target/achat-2.0-SNAPSHOT.jar achat-2.0-SNAPSHOT.jar
-ENTRYPOINT ["java","-jar","/achat-2.0-SNAPSHOT.jar"]
+COPY target/achat-6.0.jar achat-6.0.jar
+ENTRYPOINT ["java","-jar","/achat-6.0.jar"]
