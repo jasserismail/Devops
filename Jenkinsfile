@@ -73,7 +73,12 @@ pipeline{
          }
       }
 }
+stage('Docker compose') {
 
+                          steps {
+                               sh 'docker-compose up -d '
+                                 } 
+                                 }
    post{
       success{
          emailext body: 'Build success', subject: 'Jenkins',
