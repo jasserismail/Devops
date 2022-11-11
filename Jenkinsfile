@@ -46,7 +46,7 @@ pipeline{
 
       stage ('nexusdeploy'){
   steps{
-		sh " maven deploy "			}
+		sh "mvn deploy"			}
 		}
 
       stage('build image'){
